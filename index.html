@@ -5,35 +5,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Payment Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@200&display=swap" rel="stylesheet">
 </head>
 <body>
     <form action="get">
-        <h1>Payment Form</h1>
-        <fieldset>
-            <legend>Contact Info</legend>
-                <p>Name * <input type="text" name="FullName" id="Fname" required></p>
-                <p>Phone No. * <input type="number" name="PhoneNo" id="PNo." required></p>
-                <fieldset>
-                    <legend>Gender *</legend>
-                    <p><input type="radio" name="Gender" id="Male" required> Male</p>
-                    <p><input type="radio" name="Gender" id="Female" required> Female</p>
-                </fieldset>
-                <p>Address <textarea name="Address" id="Address" cols="50" rows="3"></textarea></p>
-                <p>Email *<input type="email" name="Email" id="Email" required></p>
-                <p>Pincode *<input type="number" name="Pincode" id="Pincode" required></p>
-        </fieldset>
-        <fieldset>
-            <legend>Payment Info</legend>
-            <p>Card Tpye * <select name="CardType" id="CardType" required>
-                <option value="">--Select Card Type--</option>
-                <option value="Rupay">Rupay</option>
-                <option value="Visa">Visa</option>
-                <option value="Mastercard">Mastercard</option>
-            </select></p>
-            <p>Card Number *<input type="number" name="CardNo" id="CardNo" required></p>
-            <p>Expiration date * <input type="date" name="ExpDate" id="ExpDate" required></p>
-            <p>CVV * <input type="password" name="cvv" id="cvv" required></p>
-            <input type="submit" value="Pay Now">
+        <fieldset class="form">
+            <h1 class="heading">Payment Form</h1>
+            <hr>
+            <br>
+            <fieldset class="contact">
+                <legend class="heading">Contact Info</legend>
+                    <p>Name * <input type="text" name="FullName" id="Fname" required placeholder="Full Name"></p>
+                    <p>Phone No. * <input type="number" name="PhoneNo" id="PNo." required placeholder="9876543210"></p>
+                    <fieldset id="gender">
+                        <legend>Gender *</legend>
+                        <p><input type="radio" name="Gender" id="Male" required> Male</p>
+                        <p><input type="radio" name="Gender" id="Female" required> Female</p>
+                    </fieldset>
+                    <p>Address <textarea name="Address" id="Address" cols="50" rows="3"></textarea></p>
+                    <p>Email *<input type="email" name="Email" id="Email" required placeholder="example@gmail.com"></p>
+                    <p>Pincode *<input type="number" name="Pincode" id="Pincode" required placeholder="100000"></p>
+            </fieldset>
+            <fieldset class="payment">
+                <legend class="heading">Payment Info</legend>
+                <p>Card Tpye * <select name="CardType" id="CardType" required>
+                    <option value="">--Select Card Type--</option>
+                    <option value="Rupay">Rupay</option>
+                    <option value="Visa">Visa</option>
+                    <option value="Mastercard">Mastercard</option>
+                </select></p>
+                <p>Card Number *<input type="number" name="CardNo" id="CardNo" required placeholder="12 Digit Card Number"></p>
+                <p>Expiration date * <input type="date" name="ExpDate" id="ExpDate" required></p>
+                <p>CVV * <input type="password" name="cvv" id="cvv" required placeholder="123"></p>
+                <input type="submit" value="Pay Now">
+            </fieldset>
         </fieldset>
     </form>
 </body>
